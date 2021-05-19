@@ -1,0 +1,75 @@
+{
+  "name": "@bigwin/contracts",
+  "version": "1.0.0",
+  "description": "MetaCoin example Truffle project",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "start": "echo 'Starting node for local testing....\n'; rm -rf deployments/localhost_31337; DISABLE_HARNESS=true hardhat node",
+    "hint": "solhint \"contracts/**/*.sol\"",
+    "compile": "hardhat --show-stack-traces --max-memory 8192 compile",
+    "truffle_compile": "truffle compile",
+    "console": "hardhat console --network",
+    "deploy": "hardhat deploy --write true --network",
+    "fork-run": "hardhat run --network localhost",
+    "etherscan-verify": "hardhat run ./scripts/verify.js --network",
+    "etherscan-verify-bsc": "hardhat --config hardhat.config.bsc.js run ./scripts/verify.js --network",
+    "test": "hardhat test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/truffle-box/metacoin-box.git"
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/truffle-box/metacoin-box/issues"
+  },
+  "homepage": "https://github.com/truffle-box/metacoin-box#readme",
+  "dependencies": {
+    "@openzeppelin/contracts-upgradeable": "3.4.0",
+    "@pooltogether/fixed-point": "1.0.0-beta.2",
+    "@pooltogether/pooltogether-rng-contracts": "1.0.0",
+    "@pooltogether/uniform-random-number": "1.0.0-beta.1",
+    "@pooltogether/yield-source-interface": "^1.0.1",
+    "deploy-eip-1820": "1.0.0",
+    "sortition-sum-tree-factory": "0.1.0"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.1",
+    "@nomiclabs/hardhat-etherscan": "^2.1.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@resolver-engine/core": "0.3.3",
+    "@truffle/hdwallet-provider": "1.0.34",
+    "chai": "4.2.0",
+    "chalk": "4.0.0",
+    "debug": "4.1.1",
+    "ethereum-waffle": "^3.3.0",
+    "ethers": "^5.0.0",
+    "ganache-cli": "^6.12.0",
+    "hardhat": "^2.0.11",
+    "hardhat-abi-exporter": "^2.0.8",
+    "hardhat-deploy": "^0.7.0-beta.45",
+    "hardhat-deploy-ethers": "^0.3.0-beta.7",
+    "minimist": "^1.2.5",
+    "mocha-junit-reporter": "1.23.3",
+    "shelljs": "0.8.3",
+    "solc": "0.6.4",
+    "solhint": "3.0.0",
+    "solidity-coverage": "0.7.15"
+  },
+  "files": [
+    "LICENSE",
+    "abis/**",
+    "build/**",
+    "artifacts/**",
+    ".build-openzeppelin/**",
+    "contracts/**",
+    "deployments/**",
+    "deploy/**",
+    "js/**"
+  ]
+}
